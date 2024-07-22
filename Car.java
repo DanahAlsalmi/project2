@@ -32,4 +32,10 @@ public class Car {
     public void setRoute(Route route) {
         this.route = route;
     }
+    public int decrementCapacity() {
+        if (maxCapacity > 0) {
+            maxCapacity--;
+        }
+        return maxCapacity;
+    }
 }
