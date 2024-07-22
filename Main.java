@@ -17,9 +17,9 @@ public class Main {
         for (Passenger passenger : passengers) {
             try {
                 if (passenger instanceof SubscribersPassengers) {
-                    passenger.reserveCar(car2);
-                } else {
                     passenger.reserveCar(car1);
+                } else {
+                    passenger.reserveCar(car2);
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -30,6 +30,8 @@ public class Main {
             passenger.displayInformation();
             System.out.println("-------------------------------------");
         }
+
+        System.out.println(car2.decrementCapacity());
     }
 
 }
